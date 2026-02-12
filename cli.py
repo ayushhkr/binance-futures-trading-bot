@@ -7,7 +7,7 @@ def main():
 
     parser.add_argument("--symbol", required=True, help="Trading symbol (e.g., BTCUSDT)")
     parser.add_argument("--side", required=True, help="BUY or SELL")
-    parser.add_argument("--type", required=True, help="MARKET or LIMIT")
+    parser.add_argument("--type", required=True, help="MARKET, LIMIT, or STOP_MARKET")
     parser.add_argument("--quantity", required=True, type=float, help="Order quantity")
     parser.add_argument("--price", type=float, help="Price (required for LIMIT orders)")
 

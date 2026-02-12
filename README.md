@@ -78,3 +78,13 @@ USDT-M Futures only
 Default leverage and margin mode
 
 Binance minimum notional rules apply
+
+Bonus Feature Implemented
+
+Added support for STOP_MARKET order type
+
+Supports stop trigger price
+
+Validated at CLI and service layer
+
+Executed via Binance Futures API

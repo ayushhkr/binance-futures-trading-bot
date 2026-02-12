@@ -15,7 +15,7 @@ class BinanceClient:
         if not self.api_key or not self.api_secret:
             raise ValueError("API_KEY and API_SECRET must be set in .env file")
 
-        # Use official testnet flag
+        # Official Binance Futures Testnet
         self.client = Client(
             self.api_key,
             self.api_secret,
@@ -25,6 +25,7 @@ class BinanceClient:
     def place_order(self, symbol, side, order_type, quantity, price=None):
         """
         Place order on Binance Futures Testnet.
+        Supports MARKET, LIMIT, and STOP_MARKET orders.
         """
 
         try:
@@ -33,22 +34,43 @@ class BinanceClient:
                 f"Type: {order_type}, Qty: {quantity}, Price: {price}"
             )
 
+            # MARKET ORDER
             if order_type == "MARKET":
                 response = self.client.futures_create_order(
                     symbol=symbol,
                     side=side,
-                    type=order_type,
+                    type="MARKET",
                     quantity=quantity,
                 )
 
+            # LIMIT ORDER
             elif order_type == "LIMIT":
+                if price is None:
+                    raise ValueError("Price is required for LIMIT orders")
+
                 response = self.client.futures_create_order(
                     symbol=symbol,
                     side=side,
-                    type=order_type,
+                    type="LIMIT",
                     quantity=quantity,
                     price=price,
                     timeInForce="GTC",
+                )
+
+            # STOP_MARKET ORDER
+            elif order_type == "STOP_MARKET":
+                if price is None:
+                    raise ValueError("Stop price is required for STOP_MARKET orders")
+
+                response = self.client.futures_create_order(
+                    symbol=symbol,
+                    side=side,
+                    type="STOP_MARKET",
+                    stopPrice=price,
+                    quantity=quantity,
+                    workingType="CONTRACT_PRICE",
+                    reduceOnly=False,
+                    
                 )
 
             else:

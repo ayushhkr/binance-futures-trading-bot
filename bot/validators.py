@@ -9,8 +9,8 @@ def validate_side(side: str):
 
 
 def validate_order_type(order_type: str):
-    if order_type not in ["MARKET", "LIMIT"]:
-        raise ValueError("Order type must be MARKET or LIMIT")
+    if order_type not in ["MARKET", "LIMIT", "STOP_MARKET"]:
+        raise ValueError("Order type must be MARKET, LIMIT, or STOP_MARKET")
 
 
 def validate_quantity(quantity: float):
