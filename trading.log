@@ -1,0 +1,24 @@
+2026-02-12 21:54:47,168 | INFO | Placing order | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.001, Price: None
+2026-02-12 21:54:49,056 | INFO | Order response: {}
+2026-02-12 22:33:28,990 | INFO | Placing order | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.001, Price: None
+2026-02-12 22:33:30,338 | INFO | Order response: {}
+2026-02-12 22:35:22,375 | INFO | Placing order | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.001, Price: None
+2026-02-12 22:35:23,120 | ERROR | Error placing order: APIError(code=0): Invalid JSON error message from Binance: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2026-02-12 22:39:44,744 | INFO | Placing order | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.001, Price: None
+2026-02-12 22:39:45,731 | ERROR | Error placing order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-02-12 22:40:29,996 | INFO | Placing order | Symbol: BTCUSDT, Side: BUY, Type: MARKET, Qty: 0.002, Price: None
+2026-02-12 22:40:30,987 | INFO | Order response: {'orderId': 12218814994, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ1b789390c3490e4c53ef8f', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770916234923}
+2026-02-12 22:43:42,014 | INFO | Placing order | Symbol: BTCUSDT, Side: SELL, Type: LIMIT, Qty: 0.002, Price: 90000.0
+2026-02-12 22:43:42,618 | INFO | Order response: {'orderId': 12218887768, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJd3ae4becf0559685de811e', 'price': '90000.00', 'avgPrice': '0.00', 'origQty': '0.002', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1770916426603}
